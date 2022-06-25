@@ -34,7 +34,7 @@
 <body>
     <header>
         <div class="fullWidth">
-            <div class="left">
+            <div class="left clearFloat">
                 <a href="/index.html">
                     <span class="logo">
                         <h1>Bright Chat</h1>
@@ -42,15 +42,24 @@
                     </span>
                 </a>
             </div>
+            <div class="right clearFloat">
+                <a href="">
+                    <div class="button">
+                        <span>Download</span>
+                    </div>
+                </a>
+            </div>
         </div>
     </header>
     <main>
         <div class="fullWidth">
-            <div class="left text">
+            <div class="left text clearFloat">
                 <div class="title">Secure, Seamless and Reliable</div>
                 <div class="desc">A free, simple, and trusted messenger that connects anyone anywhere. Secure calls and messages based on state-of-the-art end-to-end encryption technology. A safe platform for honest communication between families, friends, communities, and businesses.</div>
                 <div class="stores">
-                    <span class="apple">
+                    <span class="apple" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    radial-gradient(50% 50% at 50% 50%, rgba(161, 126, 236, 0.1) 0%, rgba(214, 126, 236, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));">
                         <a href="https://apps.apple.com/app/brightchat-secure-messaging/id1082880824">
                             <h1>Bright Chat AppStore</h1>
                             <img src="./img/ios.png" alt="iOS" width="120">
@@ -64,7 +73,7 @@
                     </span>
                 </div>
             </div>
-            <div class="right screens">
+            <div class="right screens clearFloat">
                 <img src="./img/phone_2x.png" alt="Bright Chat" width="493">
             </div>
         </div>

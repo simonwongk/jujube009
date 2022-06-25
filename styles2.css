@@ -64,12 +64,21 @@ img {
     font-size: 0;
 }
 
-.fullWidth {
-    display: table;
+header .fullWidth {
+    display: flex;
     margin: auto;
     width: 100%;
     max-width: 1200px;
-    padding: 0 20px
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .fullWidth {
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
 .alignCenter {
@@ -96,7 +105,7 @@ main .screens {
 }
 
 .text .title {
-    /*font-family: 'Cormorant Infant', serif;*/
+    font-family: 'Cormorant Infant', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 56px;
@@ -112,7 +121,7 @@ main .screens {
 
 .text .desc {
     margin-top: 28px;
-    /*font-family: 'SFProText';*/
+    font-family: 'SFProText', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -133,7 +142,7 @@ footer {
 }
 
 footer span {
-    /*font-family: 'Inter';*/
+    font-family: 'Inter', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -152,9 +161,103 @@ footer .privacy {
 .privacy a {
     color: #6A717C;
     text-decoration: underline;
-} 
+}
 
-@media (max-width: 1200px) { 
+.button {
+    background: linear-gradient(93.46deg, #01BDCF 11.36%, #0D79F5 110.77%);
+    box-shadow: 0px 0px 12px 0px #00000026;
+    border-radius: 4px;
+
+}
+
+.button span {
+    padding: 5px 20px;
+    display: inline-block;
+    color: #FFFFFF;
+    font-size: 17px;
+    line-height: 22px;
+}
+
+.stores > span {
+    display: inline-block;
+}
+
+.stores .android {
+    padding-left: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.download {
+    background: linear-gradient(0deg, #0058B6, #0058B6),
+    linear-gradient(98.88deg, rgba(139, 227, 255, 0) 5.8%, rgba(81, 162, 255, 0.7) 100%);
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 33px;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.imgs {
+    display: flex;
+    gap: 110px;
+    padding: 82px 115px 213px;
+}
+
+.imgs img {
+    max-width: 100%;
+}
+
+.QRCode {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.imgs > div > div > div {
+    font-family: SF Pro Text, sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: 0px;
+    text-align: center;
+    background: linear-gradient(90deg, #002E4D 0%, #010683 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.imgs > div {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    radial-gradient(50% 50% at 50% 50%, rgba(161, 126, 236, 0.1) 0%, rgba(214, 126, 236, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+    border: 0.5px solid #0000001A;
+    box-shadow: 4px 4px 24px 0px #9FE8FF40;
+    border-radius: 44px;
+    padding: 55px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content:flex-start;
+    height: 100%;
+    gap: 70px;
+}
+
+.phone {
+    justify-content: space-between;
+    gap: 50px;
+}
+
+@media (max-width: 1200px) {
     main .text { 
         max-width: 54%;
         margin-top: 15vh;
@@ -207,5 +310,39 @@ footer .privacy {
     }
     main .screens {
         margin-top: 66px;
+    }
+    .clearFloat {
+        float: none;
+    }
+    img {
+        display: block;
+    }
+    .stores {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    .button {
+        display: none;
+        font-size: 0;
+        max-width: 0;
+    }
+    .phone {
+        display: none;
+    }
+
+    .imgs {
+        flex-direction: column;
+        padding: 20px 10px;
+        gap: 12px;
+    }
+
+    .QRCode {
+        gap: 30px 20px;
+        align-items: center;
+    }
+
+    footer {
+        position: static;
     }
 }
